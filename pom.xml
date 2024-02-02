@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <name>starter-dependencies</name>
+    <groupId>com.meowu.starter</groupId>
+    <artifactId>dependencies</artifactId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- apache plugins -->
+        <apache.maven-compiler.version>3.8.1</apache.maven-compiler.version>
+        <apache.maven-jar.version>3.2.0</apache.maven-jar.version>
+        <apache.maven-resources.version>3.2.0</apache.maven-resources.version>
+
+        <!-- spring -->
+        <springboot.starter-parent.version>2.5.6</springboot.starter-parent.version>
+        <springcloud.starter-parent.version>2020.0.2</springcloud.starter-parent.version>
+
+        <!-- alibaba -->
+        <alibaba.cloud.dependencies.version>2021.1</alibaba.cloud.dependencies.version>
+        <alibaba.druid.version>1.2.1</alibaba.druid.version>
+
+        <!-- apache -->
+        <apache.commons-codec.version>1.15</apache.commons-codec.version>
+        <apache.commons-collection4.version>4.4</apache.commons-collection4.version>
+        <apache.commons-lang3.version>3.12.0</apache.commons-lang3.version>
+
+        <!-- google -->
+        <google.gson.version>2.10</google.gson.version>
+        <google.guava.version>31.1-jre</google.guava.version>
+
+        <!-- joda time -->
+        <joda-time.version>2.12.1</joda-time.version>
+
+        <!-- redis -->
+        <redisson.version>3.18.0</redisson.version>
+
+        <!-- connector -->
+        <mysql.version>8.0.27</mysql.version>
+
+        <!-- mybatis -->
+        <mybatis.springboot-starter.version>2.1.4</mybatis.springboot-starter.version>
+
+        <!-- lombok -->
+        <lombok.version>1.18.12</lombok.version>
+
+        <!-- junit -->
+        <junit.version>4.13.2</junit.version>
+
+        <!-- meowu -->
+        <meowu.starter-dependencies.version>0.0.1</meowu.starter-dependencies.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${springboot.starter-parent.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-parent</artifactId>
+                <version>${springcloud.starter-parent.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- alibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba.cloud.dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${alibaba.druid.version}</version>
+            </dependency>
+
+            <!-- apache -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${apache.commons-collection4.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${apache.commons-codec.version}</version>
+            </dependency>
+
+            <!-- google -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${google.gson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${google.guava.version}</version>
+            </dependency>
+
+            <!-- joda time -->
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+
+            <!-- redis -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!-- connector -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.springboot-starter.version}</version>
+            </dependency>
+
+            <!-- mq -->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocket.version}</version>
+            </dependency>
+
+            <!-- junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${apache.maven-compiler.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${apache.maven-resources.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${apache.maven-jar.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${springboot.starter-parent.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

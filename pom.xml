@@ -5,7 +5,7 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <name>starter-dependencies</name>
+    <name>dependencies</name>
     <groupId>com.meowu.starter</groupId>
     <artifactId>dependencies</artifactId>
     <version>0.0.1</version>
@@ -54,6 +54,8 @@
 
         <!-- meowu -->
         <meowu.starter-dependencies.version>0.0.1</meowu.starter-dependencies.version>
+        <meowu.starter-commons.version>0.0.1</meowu.starter-commons.version>
+        <meowu.starter-mybatis-plugin-mysql>0.0.1</meowu.starter-mybatis-plugin-mysql>
     </properties>
 
     <dependencyManagement>
@@ -169,6 +171,19 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- meowu -->
+            <dependency>
+                <groupId>com.meowu.starter</groupId>
+                <artifactId>commons</artifactId>
+                <version>${meowu.starter-commons.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.meowu.starter</groupId>
+                <artifactId>mybatis-plugin-commons</artifactId>
+                <version>${meowu.starter-mybatis-plugin-mysql}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.meowu.starter</groupId>
+    <artifactId>dependencies</artifactId>
+    <name>dependencies</name>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- project setting -->
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- spring -->
+        <spring-boot-dependencies.version>3.3.2</spring-boot-dependencies.version>
+        <!-- apache -->
+        <apache-commons-collections4.version>4.5.0</apache-commons-collections4.version>
+        <apache-commons-lang3.version>3.18.0</apache-commons-lang3.version>
+        <!-- google -->
+        <google-guava.version>33.4.8-jre</google-guava.version>
+        <!-- meowu -->
+<!--        <meowu-starter-commons.version>1.0.0</meowu-starter-commons.version>-->
+<!--        <meowu-starter-web.version>1.0.0</meowu-starter-web.version>-->
+<!--        <meowu-svc-support-cli.version>1.0.0</meowu-svc-support-cli.version>-->
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring-boot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- apache -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${apache-commons-collections4.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache-commons-lang3.version}</version>
+            </dependency>
+
+            <!-- google -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${google-guava.version}</version>
+            </dependency>
+
+            <!-- meowu -->
+<!--            <dependency>-->
+<!--                <groupId>com.meowu.starter</groupId>-->
+<!--                <artifactId>commons</artifactId>-->
+<!--                <version>${meowu-starter-commons.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.meowu.starter</groupId>-->
+<!--                <artifactId>web</artifactId>-->
+<!--                <version>${meowu-starter-web.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.meowu.svc</groupId>-->
+<!--                <artifactId>support-cli</artifactId>-->
+<!--                <version>${meowu-svc-support-cli.version}</version>-->
+<!--            </dependency>-->
+        </dependencies>
+    </dependencyManagement>
+</project>

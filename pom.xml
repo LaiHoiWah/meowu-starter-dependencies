@@ -22,13 +22,17 @@
         <!-- apache -->
         <apache-commons-collections4.version>4.5.0</apache-commons-collections4.version>
         <apache-commons-lang3.version>3.18.0</apache-commons-lang3.version>
+        <!-- entity graph -->
+        <cosium-entity-graph.version>3.2.0</cosium-entity-graph.version>
         <!-- google -->
         <google-guava.version>33.4.8-jre</google-guava.version>
+        <!-- user agent -->
+        <bitwalker-user-agent.version>1.21</bitwalker-user-agent.version>
         <!-- meowu -->
         <meowu-starter-entity.version>1.0.0</meowu-starter-entity.version>
         <meowu-starter-commons.version>1.0.0</meowu-starter-commons.version>
         <meowu-starter-jpa.version>1.0.0</meowu-starter-jpa.version>
-<!--        <meowu-starter-web.version>1.0.0</meowu-starter-web.version>-->
+        <meowu-starter-web.version>1.0.0</meowu-starter-web.version>
 <!--        <meowu-svc-support-cli.version>1.0.0</meowu-svc-support-cli.version>-->
     </properties>
 
@@ -56,11 +60,24 @@
                 <version>${apache-commons-lang3.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.cosium.spring.data</groupId>
+                <artifactId>spring-data-jpa-entity-graph</artifactId>
+                <version>${cosium-entity-graph.version}</version>
+            </dependency>
+
             <!-- google -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${google-guava.version}</version>
+            </dependency>
+
+            <!-- user agent -->
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${bitwalker-user-agent.version}</version>
             </dependency>
 
             <!-- meowu -->
@@ -82,11 +99,11 @@
                 <version>${meowu-starter-jpa.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>com.meowu.starter</groupId>-->
-<!--                <artifactId>web</artifactId>-->
-<!--                <version>${meowu-starter-web.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.meowu.starter</groupId>
+                <artifactId>web</artifactId>
+                <version>${meowu-starter-web.version}</version>
+            </dependency>
 
 <!--            <dependency>-->
 <!--                <groupId>com.meowu.svc</groupId>-->

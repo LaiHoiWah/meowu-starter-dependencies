@@ -34,7 +34,7 @@
         <meowu-starter-common.version>1.0.0</meowu-starter-common.version>
         <meowu-starter-web.version>1.0.0</meowu-starter-web.version>
         <meowu-starter-jpa.version>1.0.0</meowu-starter-jpa.version>
-        <meowu-svc-account-client.version>1.0.0</meowu-svc-account-client.version>
+        <meowu-svc-lilith-client.version>1.0.0</meowu-svc-lilith-client.version>
     </properties>
 
     <dependencyManagement>
@@ -100,8 +100,8 @@
 
             <dependency>
                 <groupId>com.meowu</groupId>
-                <artifactId>svc-account-client</artifactId>
-                <version>${meowu-svc-account-client.version}</version>
+                <artifactId>svc-lilith-client</artifactId>
+                <version>${meowu-svc-lilith-client.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

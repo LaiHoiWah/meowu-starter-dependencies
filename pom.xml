@@ -29,6 +29,8 @@
         <logstash-logback-encoder.version>7.4</logstash-logback-encoder.version>
         <!--  entity graph  -->
         <cosium-entity-graph.version>3.2.0</cosium-entity-graph.version>
+        <!-- java CV -->
+        <javacv-platform.version>1.5.9</javacv-platform.version>
         <!-- meowu -->
         <meowu-starter-domain.version>1.0.0</meowu-starter-domain.version>
         <meowu-starter-common.version>1.0.0</meowu-starter-common.version>
@@ -71,6 +73,13 @@
                 <groupId>com.cosium.spring.data</groupId>
                 <artifactId>spring-data-jpa-entity-graph</artifactId>
                 <version>${cosium-entity-graph.version}</version>
+            </dependency>
+
+            <!-- java CV -->
+            <dependency>
+                <groupId>org.bytedeco</groupId>
+                <artifactId>javacv-platform</artifactId>
+                <version>${javacv-platform.version}</version>
             </dependency>
 
             <!-- meowu -->

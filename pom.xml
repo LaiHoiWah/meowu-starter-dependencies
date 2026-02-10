@@ -23,6 +23,7 @@
         <!-- apache -->
         <commons-collections4.version>4.5.0</commons-collections4.version>
         <commons-lang3.version>3.18.0</commons-lang3.version>
+        <sanselan.version>0.97-incubator</sanselan.version>
         <!-- google -->
         <google-guava.version>33.4.8-jre</google-guava.version>
         <!-- logback -->
@@ -52,6 +53,12 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.sanselan</groupId>
+                <artifactId>sanselan</artifactId>
+                <version>${sanselan.version}</version>
             </dependency>
 
             <!-- google -->
